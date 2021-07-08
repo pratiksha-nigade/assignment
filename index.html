@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src=""></script>
+</head>
+<body>
+
+<div class="slideshow-container" >
+
+<div class="mySlides fade">
+  <p class="sp">TESTMONIALS</p>
+  <h1>84% reduction in image bandwidth</h1>
+  <p>Quod satic pecuniae sempiternum. Ut scait oportet motum.Nunquam invenum eum.Hic de tabula.Ego vivere util nunc fiant.
+  Istuc quot opus non est.Lorem ipsum occurrebt pragmaticam semper ut,si quis at velim tibi bene recognoscere.Quorum duo te mihi videtur.</p>
+
+  <p class="sp"><strong>Heisenberg,</strong> CTO, Website.com</p>  
+</div>
+
+<div class="mySlides fade">
+  <p class="sp">TESTMONIALS</p>
+  <h1>Modular image delivery</h1>
+  <p>Quod satic pecuniae sempiternum. Ut scait oportet motum.Nunquam invenum eum.Hic de tabula.Ego vivere util nunc fiant.
+  Istuc quot opus non est.Lorem ipsum occurrebt pragmaticam semper ut,si quis at velim tibi bene recognoscere.Quorum duo te mihi videtur.</p>
+
+  <p class="sp"><strong>De Brogli</strong> , Physicist</p>  
+</div>
+<div class="mySlides fade">
+  <p class="sp">TESTMONIALS</p>
+  <h1>3rd reduction in image bandwidth</h1>
+  <p> reduction in image bandwidth  reduction in image bandwidth  reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth</p>
+  <p class="sp"><strong>De Brogli</strong> , Physicist</p> 
+</div>
+
+<div class="mySlides fade">
+  <p class="sp">TESTMONIALS</p>
+  <h1>4rth reduction in image bandwidth</h1>
+  <p> reduction in image bandwidth  reduction in image bandwidth  reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth</p>
+  <p class="sp"><strong>De Brogli</strong> , Physicist</p> 
+  
+</div>
+
+<div class="mySlides fade">
+  <p class="sp">TESTMONIALS</p>
+  <h1>5th reduction in image bandwidth</h1>
+  <p> reduction in image bandwidth  reduction in image bandwidth  reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth</p>
+  <p class="sp"><strong>De Brogli</strong> , Physicist</p> 
+</div>
+
+<div class="mySlides fade">
+  <p class="sp">TESTMONIALS</p>
+  <h1>6 th reduction in image bandwidth</h1>
+  <p> reduction in image bandwidth  reduction in image bandwidth  reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth reduction in image bandwidth</p>
+  <p class="sp"><strong>De Brogli</strong> , Physicist</p> 
+</div>
+
+
+
+<div style="text-align:center;" id="div2">
+  <img src="1.jfif" class="dot"id="dot1" onclick="currentSlide(1)">
+  <img src="2.jpg" class="dot" onclick="currentSlide(2)">
+  <img src="3.jfif" class="dot" onclick="currentSlide(3)">
+
+  <img src="4.jfif" class="dot" onclick="currentSlide(4)">
+  <img src="5.jfif" class="dot" onclick="currentSlide(5)">
+  <img src="6.jfif" class="dot" onclick="currentSlide(6)">
+</div>
+<div id="div3">
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+</div>
+<br>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+console.log(showSlides);
+
+//for going to next slide
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+   var dots = document.getElementsByClassName("dot");
+
+  dots[slideIndex-2].style.border="none";
+  dots[slideIndex].style.border="none";
+  
+}
+
+//shows current slide
+function currentSlide(n) 
+{
+  showSlides(slideIndex = n);
+
+}
+
+//function to move in between slides
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  console.log(slides);
+  var dots = document.getElementsByClassName("dot");
+ // console.log(dots);
+  if (n > slides.length)
+   {slideIndex = 1}    
+  if (n < 1)
+   {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) 
+  {
+      slides[i].style.display = "none"; 
+
+  }
+  for (i = 0; i < dots.length; i++) 
+  {
+      dots[i].className = dots[i].className.replace(" active", "");
+
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+
+  dots[slideIndex-1].style.border="3px solid blue";
+ 
+}
+</script>
+
+</body>
+</html> 
