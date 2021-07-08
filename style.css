@@ -51,6 +51,13 @@ img {vertical-align: middle;}
 
 
 }
+a{
+    margin-left: 600px;
+    text-decoration: none;
+  
+    font-family:Verdana, sans-serif;
+    font-size: 15px;
+  }
 
 .prev{
   margin-left: 1200px;
